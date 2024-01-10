@@ -1,3 +1,5 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,600;1,100;1,500;1,600&family=Sora:wght@400;600;700&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -7,6 +9,10 @@
     outline: none;
     scroll-behavior: smooth;
     font-family: 'Poppins', sans-serif;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+font-family: 'Sora', sans-serif;
 }
 :root {
     --bg-color: #fdfdfd;
@@ -45,12 +51,57 @@ body{
     box-shadow: 0 .1rem 1rem var(--shadow-color);
 } 
 .logo{
-    font-size: 2.5rem;
+    /* font-size: 2.5rem;
+    color: var(--main-color);
+    font-weight: 600;
+    cursor: default;
+    margin-right: auto; */
+
     color: var(--main-color);
     font-weight: 600;
     cursor: default;
     margin-right: auto;
+
+
+    font-weight: var(--font-semi-bold);
+    margin-right: auto;
+    font-size: 2.5rem;
+    color: transparent;
+    background-image: linear-gradient(#754ef9, #754ef9);
+    background-repeat: no-repeat;
+    -webkit-background-clip: text;
+    background-position: -410px 0;
+    animation: animateText 5s linear infinite;
 }
+.navlogo{
+    /* display: inline-flex; */
+    /* align-items: center; */
+    /* column-gap: .25rem; */
+    color: var(--main-color);
+    font-weight: 600;
+    cursor: default;
+    margin-right: auto;
+
+
+    font-weight: var(--font-semi-bold);
+    margin-right: auto;
+    font-size: 2.5rem;
+    color: transparent;
+    background-image: linear-gradient(#754ef9, #754ef9);
+    background-repeat: no-repeat;
+    -webkit-background-clip: text;
+    background-position: -410px 0;
+    animation: animateText 5s linear infinite;
+}
+@keyframes animateText {
+    0%, 95%, 100% {
+        background-position: -410px 0;
+    }
+    65%, 85% {
+        background-position: 0 0;
+    }
+}
+
 .navbar a {
     position: relative;
     font-size: 1.2rem;
@@ -113,27 +164,36 @@ section{
     font-weight: 700;
     margin-bottom: .3rem;
 }
+.home-content h1:hover {
+    cursor: pointer;
+    color: transparent;
+    -webkit-text-stroke: 1px var(--main-color);
+  }
+
 .home-content p{
     font-size: 1.6rem;
 }
 .home-content .social-media a{
-display: inline-flex;
-justify-content: center;
-align-items: center;
-width: 4rem;
-height: 4rem;
-background: transparent;
-border: .2rem solid var(--main-color);
-border-radius: 50%;
-box-shadow: 0 .2rem .5rem var(--shadow-color);
-font-size: 2rem;
-color: var(--main-color);
-margin: 2.5rem 1.5rem 3rem 0;
-transition: .5s ease;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background: transparent;
+    border: .2rem solid var(--main-color);
+    border-radius: 50%;
+    box-shadow: 0 .2rem .5rem var(--shadow-color);
+    font-size: 2rem;
+    color: var(--main-color);
+    margin: 2.5rem 1.5rem 3rem 0;
+    transition: .5s ease;
 }
 .home-content .social-media a:hover{
     background: var(--main-color);
     color: var(--white-color);
+    transform: scale(1.3);
+    transition: .3s;
+    cursor: pointer;
 }
 .btn{
     display: inline-block;
@@ -152,6 +212,9 @@ transition: .5s ease;
     background: transparent;
     color: var(--main-color);
     border-color: var(--main-color);
+    cursor: pointer;
+    transform: scale(1.3);
+   transition: .3s;
 }
 .home .profession-container {
    position: absolute;
@@ -244,8 +307,11 @@ animation: professionRotate 13s ease-out infinite;
     position: absolute;
     bottom: 0;
     right: 0;
-    width: 50%;
+    width: 40%;
     pointer-events: none;
+    height: 90%;
+    border-radius: 50%;
+    top: 100px;
 }
 span{
     color: var(--main-color);
@@ -268,6 +334,11 @@ span{
     text-align: left;
     line-height: 1.2;
 }
+.about-content h2:hover {
+    cursor: pointer;
+    color: transparent;
+    -webkit-text-stroke: 1px var(--main-color);
+  }
 .about-content h3{
     font-size: 2rem;
 }
@@ -282,6 +353,12 @@ span{
 .services h2 {
     margin-bottom: 5rem;
 }
+.services h2:hover {
+    cursor: pointer;
+    color: transparent;
+    -webkit-text-stroke: 1px var(--main-color);
+  }
+
 .services .services-container{
     display: flex;
     justify-content: center;
@@ -325,6 +402,11 @@ span{
 .portfolio h2{
     margin-bottom: 4rem;
 }
+.portfolio h2:hover {
+    cursor: pointer;
+    color: transparent;
+    -webkit-text-stroke: 1px var(--main-color);
+  }
 .portfolio .portfolio-container{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -392,6 +474,11 @@ transform: scale(1.1);
     width: 100%;
     padding:  5rem 1rem;
 }
+.testimonial-container h2:hover {
+    cursor: pointer;
+    color: transparent;
+    -webkit-text-stroke: 1px var(--main-color);
+  }
 .testimonial-container .testimonial-wrapper{
     position: relative;
     max-width: 90rem;
@@ -441,7 +528,7 @@ color: var(--main-color);
     left: 0;
 }
 .testimonial-box .swiper-pagination-bullet {
-    background: rgba(0, 0, 0, .1);
+    background: rgba(0, 0, 0, .8);
 }
 .testimonial-box .swiper-pagination-bullet-active{
     background: var(--main-color);
@@ -450,6 +537,11 @@ color: var(--main-color);
 .contact h2 {
     margin-bottom: 3rem;
 }
+.contact h2:hover {
+    cursor: pointer;
+    color: transparent;
+    -webkit-text-stroke: 1px var(--main-color);
+  }
 .contact form {
     max-width: 70rem;
     margin: 1rem auto;
