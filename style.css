@@ -244,7 +244,7 @@ animation: professionRotate 13s ease-out infinite;
     position: absolute;
     bottom: 0;
     right: 0;
-    width: 100%;
+    width: 50%;
     pointer-events: none;
 }
 span{
